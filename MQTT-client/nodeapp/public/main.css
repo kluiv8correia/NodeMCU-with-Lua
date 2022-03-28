@@ -1,0 +1,16 @@
+body {
+    font-family: monospace;
+    margin: 0px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid black;
+    border-radius: 0px 0px 10px 10px;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}

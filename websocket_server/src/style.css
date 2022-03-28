@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    font-family: monospace;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.0rem;
+    color: white;
+    background-color: #4a148c;
+    padding: 5px 0px;
+    border-bottom: clamp(5px, 10px, 2.5vh) solid #e1bee7;
+    letter-spacing: clamp(2px, 15px, 1.4vw);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(200px, 500px, 80vw);
+    height: max-content;
+    margin: clamp(20px, 80px, 30vh) auto;
+    border: 1px solid silver;
+    border-radius: 15px;
+}
+.card {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 100%;
+}
+.card > * {
+    padding: 5px 20px;
+}
+.card p:nth-child(odd) {
+    color: #E0610E;
+    font-size: 1rem;
+    margin: auto 0px;
+}
+.card p:nth-child(even) {
+    font-size: 1.2rem;
+}

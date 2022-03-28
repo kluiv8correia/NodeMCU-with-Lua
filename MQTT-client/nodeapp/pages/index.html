@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Stallion</title>
+        <link rel='stylesheet' href='./main.css'>
+    </head>
+    <body>
+        <div class='header'><h1>MQTT Client</h1></div>
+
+        <div class='card'>
+            <form id='super' action="/message" method="post">
+                Message: <input id='message' autocomplete='off' type="text"><br>
+               <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+    <script>
+        const superForm = document.getElementById('super')
+        const field = document.getElementById('message')
+        
+        superForm.addEventListener('submit', e => {
+            e.preventDefault() // prevent the new page load on submit
+            const message = field.value // get the field value
+            console.log(message)
+            field.value = '' // reset the field value
+            if (message.length > 0) { // check if not empty
+                let request = new XMLHttpRequest() // create a XHR request
+                request.open('POST', '/message', true) // open a POST request and make async true
+                // set the request header as plain text (remember the placement of this has to be between the send and open)
+                request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8") 
+                // send the request
+                request.send(message)
+            }
+        })
+    </script>
+</html>

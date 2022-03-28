@@ -1,0 +1,3 @@
+Download the esp-wifi-repeater from github via the link: https://github.com/martin-ger/esp_wifi_repeater
+replace the web.h file in user directory and make the file using docker
+(as superuser, make sure the module is connected). Finally flash it. 
